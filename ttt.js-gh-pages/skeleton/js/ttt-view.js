@@ -10,35 +10,9 @@
   };
 
   View.prototype.bindEvents = function () {
-
-    // this.$el.on("click", "li", function (e) {
-    //   this.makeMove(e)
-    // }.bind(this));
-
     this.$el.on("click", "li", this.makeMove.bind(this));
-
-    // this.$el.on("click", "li", function (e) {
-    //   var $target = $(e.target);
-    //   if (!$target.hasClass("x-square") && !$target.hasClass("o-square")) {
-    //     mark = this.game.currentPlayer;
-    //     $target.addClass(mark + "-square");
-    //     this.game.playMove($target.data("pos"));
-    //   } else {
-    //     alert("Stoopid move dood.");
-    //   };
-    //   if (this.game.winner){
-    //     alert(this.game.winner + "WINS!");
-    //   }
-    // }.bind(this));
   };
 
-  // var $.prototype.on = function (eventName, cb) {
-  //   when eventName happens {
-  //     var theEvent = new $.Event();
-  //     cb(theEvent);
-  //   }
-  //
-  // }
 
   View.prototype.makeMove = function ($square) {
       var $target = $($square.target);
