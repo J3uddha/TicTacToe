@@ -21,10 +21,15 @@ head, body, figure, ul, li {
 
 /*Styles*/
 
+body {
+  font-family: sans-serif;
+}
+
 .view {
   width: 310px;
   height: 310px;
   margin: 10px auto;
+  background: lightgrey;
 }
 
 .view > li {
@@ -35,6 +40,10 @@ head, body, figure, ul, li {
   /*border: 1px solid red;*/
 }
 
+.view > li:hover {
+  background: gold;
+}
+
 .view > li:nth-child(3n+2) {
   border-left: 5px solid black;
   border-right: 5px solid black;
@@ -43,4 +52,26 @@ head, body, figure, ul, li {
 .view > li:nth-child(4), .view > li:nth-child(5), .view > li:nth-child(6){
   border-bottom: 5px solid black;
   border-top: 5px solid black;
+}
+
+.x-square:after {
+  content: "X";
+  text-align: center;
+  font-size: 90px;
+  display: block;
+  margin: auto;
+  height: inherit;
+  color: green;
+  background: white;
+}
+
+.o-square:after {
+  content: "O";
+  text-align: center;
+  font-size: 90px;
+  display: block;
+  margin: auto;
+  height: inherit;
+  color: orange;
+  background: white;
 }

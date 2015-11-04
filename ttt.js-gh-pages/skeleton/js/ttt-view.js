@@ -13,9 +13,17 @@
     this.$el.on("click", "li", function (e){
 
       var $target = $(e.target);
-      $target.toggleClass("clicked");
+      if (!$target.hasClass("x-square") && !$target.hasClass("o-square")) {
+        mark = this.game.currentPlayer;
+        console.log(mark);
+        $target.addClass(mark + "-square");
+        this.game.playMove($target.data("pos"));
+      } else {
+        alert("Stoopid move dood.");
+      }
 
-    });
+
+    }.bind(this));
   };
 
   View.prototype.makeMove = function ($square) {
@@ -25,8 +33,14 @@
   View.prototype.setupBoard = function () {
 
     var $ul = $("<ul>").addClass("view group");
-    var cells = $("<li><li><li><li><li><li><li><li><li>");
-    $ul.append(cells);
+
+    for (var i = 0; i < 3; i++){
+      for (var j = 0; j < 3; j++){
+        var cell = $("<li>");
+        cell.data("pos", [i, j]);
+        $ul.append(cell);
+      }
+    }
 
     this.$el.append($ul);
   };
