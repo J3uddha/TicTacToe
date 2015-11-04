@@ -1,0 +1,71 @@
+head, body, figure, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+
+  background: transparent;
+  list-style: none;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.towers {
+  display: block;
+  height: 200px;
+  width: 30px;
+  margin: 65px;
+  float: left;
+  background: lightgray;
+  position: relative;
+  border: 1px solid black;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.towers > li:first-child {
+  margin-top: 95px;
+}
+
+.towers > li {
+  height: 30px;
+}
+
+.disk-1,
+.disk-2,
+.disk-3 {
+  border-radius: 20px;
+  border: 3px solid black;
+
+  /*overflow: hidden;*/
+  margin: auto;
+  position: relative;
+}
+
+
+
+.disk-1 {
+  width: 50px;
+  left: -13px;
+  background: yellow;
+}
+
+.disk-2 {
+  width: 100px;
+  left: -37px;
+  background: orange;
+}
+
+.disk-3 {
+  width: 150px;
+  left: -62px;
+  background: brown;
+}
