@@ -1,0 +1,46 @@
+head, body, figure, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+
+  background: transparent;
+  list-style: none;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+/*Styles*/
+
+.view {
+  width: 310px;
+  height: 310px;
+  margin: 10px auto;
+}
+
+.view > li {
+  display: block;
+  float: left;
+  width: 100px;
+  height: 100px;
+  /*border: 1px solid red;*/
+}
+
+.view > li:nth-child(3n+2) {
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+}
+
+.view > li:nth-child(4), .view > li:nth-child(5), .view > li:nth-child(6){
+  border-bottom: 5px solid black;
+  border-top: 5px solid black;
+}
